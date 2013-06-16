@@ -69,7 +69,7 @@ module PocketApi
     # * tags_clear
     # * tags_rename
     def modify(action, options={})
-      request(:post, '/v3/send', :body => {:action => action}.merge(options))
+      request(:post, '/v3/send', :body => [{:action => action}.merge(options)])
     end
     
     
